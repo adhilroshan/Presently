@@ -47,8 +47,9 @@ To modify the presentation content, edit the individual slide components in the 
 - Recharts (for charts)
 - Lucide React (for icons)
 - Zustand (for state management)
-- React Syntax Highlighter
-- Monaco Editor 
+- Framer Motion (for animations)
+- Monaco Editor (for code editing)
+- React Syntax Highlighter (for syntax highlighting)
 
 ## Future Improvements
 
