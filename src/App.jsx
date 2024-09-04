@@ -79,10 +79,10 @@ const App = () => {
           </button>
         </div>
 
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+        <div className="fixed top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
         {
-          darkMode ? <img src="/logo-no-background.png" alt="Watermark" className="w-" /> :
-          <img src="/logo-black-no-background.png" alt="Watermark" className="w-" />
+          darkMode ? <img src="/logo-no-background.png" alt="Watermark" className="w-full" /> :
+          <img src="/logo-black-no-background.png" alt="Watermark" className="w-full" />
         }
         </div>
       </ErrorBoundary>
