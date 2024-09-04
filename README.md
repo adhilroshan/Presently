@@ -20,7 +20,7 @@ This project is a reusable JavaScript-based presentation template created with R
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
-4. Open [http://localhost:5179](http://localhost:5173) in your browser
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
 
 ## Available Scripts
 
