@@ -10,17 +10,11 @@ const PythonCompiler = ({ code }) => {
         try {
             setLoading(true);
             setError(null);
-            const response = await axios.post('https://emkc.org/api/v2/piston/execute', { 
-                "language": "python",
-                "version": "3.10.0",
-                "files": [
-                    {
-                        "name": "main",
-                        "content": code
-                    }]
+            const response = await axios.post('https://presently-hljl.onrender.com/run-python', { 
+               code
              });
              console.log(response.data);
-            setOutput(response.data.run.stdout || response.data.run.stderr);
+            setOutput(response.data.output);
         } catch (err) {
             setError('Error compiling Python code. Please try again.');
             console.error(err);
