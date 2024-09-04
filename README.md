@@ -1,4 +1,7 @@
+![logo-white](https://github.com/user-attachments/assets/268a2513-5643-4789-9484-f8c94795d8f4)
+
 # Presently Presentation Template
+
 
 This project is a reusable JavaScript-based presentation template created with React, featuring improved performance, accessibility, and error handling.
 
