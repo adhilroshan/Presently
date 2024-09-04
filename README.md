@@ -17,7 +17,7 @@ This project is a reusable JavaScript-based presentation template created with R
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:5179](http://localhost:5173) in your browser
 
 ## Available Scripts
 
@@ -47,14 +47,10 @@ To modify the presentation content, edit the individual slide components in the 
 - Recharts (for charts)
 - Lucide React (for icons)
 - Zustand (for state management)
-- React Syntax Highlighter
-- Monaco Editor 
+- Framer Motion (for animations)
+- Monaco Editor (for code editing)
+- React Syntax Highlighter (for syntax highlighting)
 
-## Future Improvements
-
-- Implement a backend service for securely executing Python code
-- Add unit and integration tests
-- Implement more advanced animations for slide transitions
 
 ## License
 
