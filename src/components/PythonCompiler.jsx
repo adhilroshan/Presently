@@ -13,8 +13,8 @@ const PythonCompiler = ({ code }) => {
             const response = await axios.post('https://presently-hljl.onrender.com/run-python', { 
                code
              });
-             console.log(response.data);
-            setOutput(response.data.output);
+            console.log(response.data);
+            setOutput(response.data.output||response.data.error);
         } catch (err) {
             setError('Error compiling Python code. Please try again.');
             console.error(err);

@@ -32,7 +32,7 @@ app.post("/run-python", (req, res) => {
 
     if (error) {
       // Return the error as a JSON response
-      return res.status(400).json({ error: stderr });
+      return res.json({ error: stderr });
     }
 
     res.json({ output: stdout });
