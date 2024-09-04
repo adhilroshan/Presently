@@ -38,21 +38,21 @@ const App = () => {
 
   return (
     <div
-      className={`min-h-screen ${darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'}`}
+      className={`min-h-screen font-suse h-screen flex flex-col  ${darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'}`}
       onKeyDown={handleKeyDown}
       tabIndex="0"
     >
       <ErrorBoundary>
         <Header currentSlide={currentSlide} totalSlides={totalSlides} />
 
-        <main className="container mx-auto p-4">
+        <main className="container mx-auto p-4 grow">
           <Suspense fallback={<Loading />}>
             {slides[currentSlide - 1]}
           </Suspense>
         </main>
 
-        <Footer />
 
+        <Footer />
         <div className="fixed bottom-4 right-4 flex space-x-2">
           <button
             onClick={prevSlide}
@@ -79,8 +79,11 @@ const App = () => {
           </button>
         </div>
 
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-          <img src="/api/placeholder/200/100" alt="Watermark" className="w-32" />
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+        {
+          darkMode ? <img src="/logo-no-background.png" alt="Watermark" className="w-" /> :
+          <img src="/logo-black-no-background.png" alt="Watermark" className="w-" />
+        }
         </div>
       </ErrorBoundary>
     </div>

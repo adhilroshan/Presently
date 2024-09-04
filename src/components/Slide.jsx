@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Slide = ({ children }) => (
-    <div className="slide">
+    <div className="slide flex flex-col justify-center h-full">
         {children}
     </div>
 );
