@@ -1,4 +1,4 @@
-# Enhanced Presentation Template
+# Presently Presentation Template
 
 This project is a reusable JavaScript-based presentation template created with React, featuring improved performance, accessibility, and error handling.
 
@@ -10,7 +10,7 @@ This project is a reusable JavaScript-based presentation template created with R
 - Error boundary for graceful error handling
 - Lazy loading of slide components for improved performance
 - Improved accessibility with keyboard navigation and ARIA labels
-- Demo logo and watermark
+- Logo and watermark
 
 ## Getting Started
 
@@ -46,6 +46,9 @@ To modify the presentation content, edit the individual slide components in the 
 - Tailwind CSS
 - Recharts (for charts)
 - Lucide React (for icons)
+- Zustand (for state management)
+- React Syntax Highlighter
+- Monaco Editor 
 
 ## Future Improvements
 
