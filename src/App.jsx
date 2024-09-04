@@ -45,7 +45,7 @@ const App = () => {
   return (
     <div
       ref={containerRef}
-      className={`min-h-screen font-suse h-screen overflow-scroll flex flex-col ${darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'}`}
+      className={`min-h-screen font-suse h-svh overflow-scroll flex flex-col ${darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'}`}
       onKeyDown={handleKeyDown}
       tabIndex="0"
     >
