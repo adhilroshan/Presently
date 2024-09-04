@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { useState, useEffect, Suspense, lazy, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Sun, Moon } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -25,6 +25,7 @@ const slides = [
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const { darkMode, toggleDarkMode } = useDarkModeStore();
+  const containerRef = useRef(null);
 
   const totalSlides = slides.length;
 
@@ -36,9 +37,15 @@ const App = () => {
     if (event.key === 'ArrowLeft') prevSlide();
   };
 
+  useEffect(() => {
+    // Focus the container div on mount
+    containerRef.current.focus();
+  }, []);
+
   return (
     <div
-      className={`min-h-screen font-suse h-screen overflow-scroll flex flex-col  ${darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'}`}
+      ref={containerRef}
+      className={`min-h-screen font-suse h-screen overflow-scroll flex flex-col ${darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'}`}
       onKeyDown={handleKeyDown}
       tabIndex="0"
     >
@@ -51,8 +58,8 @@ const App = () => {
           </Suspense>
         </main>
 
-
         <Footer />
+
         <div className="fixed bottom-4 right-4 flex space-x-2">
           <button
             onClick={prevSlide}
@@ -79,11 +86,12 @@ const App = () => {
           </button>
         </div>
 
-        <div className="fixed top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
-        {
-          darkMode ? <img src="/logo-no-background.png" alt="Watermark" className="w-full" /> :
-          <img src="/logo-black-no-background.png" alt="Watermark" className="w-full" />
-        }
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+          {darkMode ? (
+            <img src="/logo-no-background.png" alt="Watermark" className="w-full" />
+          ) : (
+            <img src="/logo-black-no-background.png" alt="Watermark" className="w-full" />
+          )}
         </div>
       </ErrorBoundary>
     </div>
