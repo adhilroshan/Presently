@@ -1,12 +1,13 @@
 import express from "express";
 import { exec } from "child_process";
 import { writeFileSync } from "fs";
-import cors from "cors"; // Import the cors middleware
+import cors from "cors";
 import path from "path";
+import os from "os";
 
 const app = express();
 
-app.use(cors()); // Enable CORS for all routes
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -14,7 +15,8 @@ app.get("/", (req, res) => {
 });
 
 const tempFileName = "temp.py";
-let tempFilePath = path.join(process.cwd(), tempFileName);
+const tempFilePath = path.join(os.tmpdir(), tempFileName); // Use a temporary directory
+
 app.post("/run-python", (req, res) => {
   const { code } = req.body;
 
@@ -22,7 +24,7 @@ app.post("/run-python", (req, res) => {
   writeFileSync(tempFilePath, code);
 
   // Execute the Python code
-  exec(`python ${tempFileName}`, (error, stdout, stderr) => {
+  exec(`python ${tempFilePath}`, (error, stdout, stderr) => {
     if (error) {
       return res.status(500).json({ error: stderr });
     }
