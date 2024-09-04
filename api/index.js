@@ -2,6 +2,7 @@ import express from "express";
 import { exec } from "child_process";
 import { writeFileSync } from "fs";
 import cors from "cors"; // Import the cors middleware
+import path from "path";
 
 const app = express();
 
@@ -12,12 +13,13 @@ app.get("/", (req, res) => {
   res.json({ message: "Python Code Execution API" });
 });
 
+const tempFileName = "temp.py";
+let tempFilePath = path.join(process.cwd(), tempFileName);
 app.post("/run-python", (req, res) => {
   const { code } = req.body;
 
   // Save the Python code to a temporary file
-  const tempFileName = "temp.py";
-  writeFileSync(tempFileName, code);
+  writeFileSync(tempFilePath, code);
 
   // Execute the Python code
   exec(`python ${tempFileName}`, (error, stdout, stderr) => {
