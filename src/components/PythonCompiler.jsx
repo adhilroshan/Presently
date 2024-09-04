@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const PythonCompiler = ({ code }) => {
-    const [output, setOutput] = useState('');
+    const [output, setOutput] = useState('Hello, World!');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
