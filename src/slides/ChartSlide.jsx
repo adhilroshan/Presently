@@ -4,7 +4,7 @@ import Chart from '../components/Chart';
 
 const ChartSlide = () => (
   <Slide>
-    <h2 className="text-3xl font-bold mb-4">Slide with Chart</h2>
+    <h2 className="mb-4 text-3xl font-bold">Slide with Chart</h2>
     <Chart />
   </Slide>
 );

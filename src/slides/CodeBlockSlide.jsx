@@ -13,7 +13,7 @@ const CodeBlockSlide = () => {
 
     return (
         <Slide>
-            <h2 className="text-3xl font-bold mb-4">Slide with Code Block</h2>
+            <h2 className="mb-4 text-3xl font-bold">Slide with Code Block</h2>
             <SyntaxHighlighter  language="javascript" style={atomDark}>
                 {codeString}
             </SyntaxHighlighter>

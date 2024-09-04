@@ -23,7 +23,7 @@ const Slide = ({ children }) => (
         animate="visible"
         exit="hidden"
         variants={containerVariants}
-        className="slide flex flex-col justify-center h-full"
+        className="slide flex h-full flex-col justify-center"
     >
         {children}
     </motion.div>

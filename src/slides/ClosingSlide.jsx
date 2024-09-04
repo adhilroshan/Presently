@@ -3,7 +3,7 @@ import Slide from '../components/Slide';
 
 const ClosingSlide = () => (
     <Slide>
-        <h2 className="text-3xl font-bold mb-4">Thank You!</h2>
+        <h2 className="mb-4 text-3xl font-bold">Thank You!</h2>
         <p>This is the closing slide.</p>
     </Slide>
 );

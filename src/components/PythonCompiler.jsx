@@ -27,7 +27,7 @@ const PythonCompiler = ({ code }) => {
         <div className="space-y-4">
             <button
                 onClick={runCode}
-                className="w-full sm:w-auto px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+                className="w-full rounded bg-green-500 px-4 py-2 text-white hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 sm:w-auto"
                 disabled={loading}
                 aria-label="Run Python code"
             >
@@ -38,7 +38,7 @@ const PythonCompiler = ({ code }) => {
             )}
             <div className="mt-4">
                 <h3 className="text-lg font-medium">Output:</h3>
-                <pre className="mt-2 p-2 bg-gray-100 dark:bg-gray-800 text-white rounded overflow-x-auto">
+                <pre className="mt-2 overflow-x-auto rounded bg-gray-100 p-2 text-white dark:bg-gray-800">
                     <code>
                     {output}
                     </code>

@@ -13,7 +13,7 @@ const OpeningSlide = () => (
             initial="hidden"
             animate="visible"
             variants={itemVariants}
-            className="text-5xl font-bold mb-4"
+            className="mb-4 text-5xl font-bold"
         >
             Welcome to Our Presentation
         </motion.h1>

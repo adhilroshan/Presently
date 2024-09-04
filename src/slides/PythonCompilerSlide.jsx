@@ -15,8 +15,8 @@ const PythonCompilerSlide = () => {
     return (
         <Slide>
             <div className="space-y-4">
-                <h2 className="text-3xl font-bold mb-4">Slide with Python Code Compiler</h2>
-                <div className="bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden">
+                <h2 className="mb-4 text-3xl font-bold">Slide with Python Code Compiler</h2>
+                <div className="overflow-hidden rounded-md bg-gray-100 dark:bg-gray-800">
                     <Editor
                         width="100%"
                         height="300px"

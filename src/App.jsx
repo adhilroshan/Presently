@@ -52,7 +52,7 @@ const App = () => {
       <ErrorBoundary>
         <Header currentSlide={currentSlide} totalSlides={totalSlides} />
 
-        <main className="container mx-auto p-4 grow">
+        <main className="container mx-auto grow p-4">
           <Suspense fallback={<Loading />}>
             {slides[currentSlide - 1]}
           </Suspense>
@@ -64,7 +64,7 @@ const App = () => {
           <button
             onClick={prevSlide}
             disabled={currentSlide === 1}
-            className="p-2 bg-blue-500 text-white rounded disabled:opacity-50"
+            className="rounded bg-blue-500 p-2 text-white disabled:opacity-50"
             aria-label="Previous slide"
           >
             <ChevronLeft />
@@ -72,21 +72,21 @@ const App = () => {
           <button
             onClick={nextSlide}
             disabled={currentSlide === totalSlides}
-            className="p-2 bg-blue-500 text-white rounded disabled:opacity-50"
+            className="rounded bg-blue-500 p-2 text-white disabled:opacity-50"
             aria-label="Next slide"
           >
             <ChevronRight />
           </button>
           <button
             onClick={toggleDarkMode}
-            className="p-2 bg-yellow-500 text-white rounded"
+            className="rounded bg-yellow-500 p-2 text-white"
             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           >
             {darkMode ? <Sun /> : <Moon />}
           </button>
         </div>
 
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
+        <div className="pointer-events-none fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-5">
           {darkMode ? (
             <img src="/logo-no-background.png" alt="Watermark" className="w-full" />
           ) : (
